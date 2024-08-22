@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font: 1em sans-serif;
+}
+body{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(137, 43, 226, 0.534);
+    background-image: url(background.jpg);
+}
+.container{
+    max-width: 750px;
+    padding: 28px;
+    margin: 0 28px;
+    box-shadow: 0 15px 20px #262626; 
+    background-color:rgba(105, 255, 143, 0.384);
+    height: 105vh;
+}
+h2{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    color:rgba(0, 204, 255, 0.616);
+    padding-bottom: 8px;
+    border-bottom: 1px solid gainsboro;
+}
+#content{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 20px 0;
+    width:auto;
+    
+}
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+.input-box label, .gender-title{
+    width: 95%;
+    color:black;
+    font-weight:600;
+    margin: 5px 0;
+    text-align: left;
+}
+.gender-title{
+    font-size: 16px;
+}
+.input-box input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid ;
+    border-color:burlywood;
+    outline:#262626;
+}
+.input-box input:is(:focus,:valid)
+{
+    box-shadow: 0 10px 12px;
+    box-shadow: rgba(255, 0, 0, 0.692);
+}
+#email-feild{
+    display: block;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #555;
+    background: transparent;
+    outline: none;
+    font-size: 26px;
+    padding: 5px 2px;
+    position: relative;
+}
+.gender-category label{
+    padding: 0 20px 0 5px;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+.gender-category{
+    color:black;
+}
+.gender-category label,.gender-category input{
+    cursor:pointer;
+    color:gainsboro; 
+     
+}
+
+
+.alter p{
+    font-size: 14px;
+    font-style: italic;
+    color:#fff;
+    margin: 45px 0;
+    padding: 10px;
+    line-height: 1.5;
+}
+.alter a{
+    font-weight: bold;
+    text-decoration: none;
+    color: skyblue;
+}
+.alter a:hover{
+    text-decoration: underline;
+}
+.btn{
+    margin: 15px 0;
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+.btn button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color:white;
+    border: none;
+    border-radius: 10px;  
+    background-color: rgba(255, 0, 0, 0.685);
+    cursor: pointer;
+    transition: 0.3s;  
+}
+.btn button:hover{
+    background-color:black;
+}
+@media(max-width:600px){
+    .container{
+        min-height: 380px;
+        overflow:auto;
+    }
+    .input-box{
+        margin-bottom:12px;
+        width:100%;
+    }
+    .input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+    .gender-category{
+        display: flex;
+        justify-content: space-between;
+        width: 60;
+    }
+    #content::-webkit-scrollbar{
+        width: 0;
+    }
+}
